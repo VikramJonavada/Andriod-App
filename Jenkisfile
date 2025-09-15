@@ -3,11 +3,12 @@ pipeline {
         docker { image 'cimg/android:2023.09.1' }
     }
     environment {
-        DIR = 'Andriod-studio/helloworld/helloworld2'
+        DIR = 'Andriod-App/helloworld/helloworld2'
     }
     stages {
         stage('Checkout') {
             steps {
+                cleanWs()
                 sh 'git clone https://github.com/VikramJonavada/Andriod-App.git'
             }
         }
