@@ -6,12 +6,6 @@ pipeline {
         DIR = 'Andriod-App/helloworld/helloworld2'
     }
     stages {
-        stage('Checkout') {
-            steps {
-                cleanWs()
-                sh 'git clone https://github.com/VikramJonavada/Andriod-App.git'
-            }
-        }
         stage('Setup') {
           steps {
             dir(DIR) {
